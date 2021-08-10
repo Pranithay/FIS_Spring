@@ -27,8 +27,8 @@ public class SpringLearnApplication {
 //		displayEmployee();
 		getEmployeeController();
 
-//		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(EmployeeController.class);
-//		displayEmployeeControllerAnnotation(applicationContext);
+	ApplicationContext applicationContext = new AnnotationConfigApplicationContext(EmployeeController.class);
+		displayEmployeeControllerAnnotation(applicationContext);
 	}
 
 	public static void displayEmployeeControllerAnnotation(ApplicationContext applicationContext) {
