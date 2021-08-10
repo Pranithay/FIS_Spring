@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
+
 	<bean id="employee" class="com.fis.springlearn.bean.Employee">
 		<property name="id" value="10"></property>
 		<property name="name" value="Swetha"></property>
@@ -37,4 +38,15 @@
 		<property name="name" value="js" />
 	</bean>
 
+	<bean id="dao" class="com.fis.springlearn.dao.EmployeeDao">
+
+	</bean>
+	<bean id="service"
+		class="com.fis.springlearn.service.EmployeeService">
+		<property name="employeeDao" ref="dao"></property>
+	</bean>
+	<bean id="controller"
+		class="com.fis.springlearn.controller.EmployeeController">
+		<property name="employeeService" ref="service"></property>
+	</bean>
 </beans>
